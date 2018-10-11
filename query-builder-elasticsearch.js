@@ -34,7 +34,7 @@
         ESQueryStringQueryOperators: {
             is_not_null:           function(){ return "_exists_:"; },
             is_null:          function(){ return "_missing_:";},
-            contains:         function(v){ return v; },
+            contains:         function(v){ return "*"+ v + "*"; },
             between:          function(v){ return '[' + v[0] + ' TO '+ v[1] + "]"; },
         }
     });
